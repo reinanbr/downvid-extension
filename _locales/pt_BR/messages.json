@@ -1,0 +1,272 @@
+{
+  "extName": {
+    "message": "DownVid: baixe vídeos, músicas e fotos"
+  },
+  "extDescription": {
+    "message": "Baixe vídeos, músicas e fotos do YouTube, Instagram, Threads, TikTok, X, Facebook, SoundCloud e de qualquer página com vídeo MP4/HLS, usando a API do DownVid."
+  },
+  "tabDownload": {
+    "message": "Baixar"
+  },
+  "tabDownloads": {
+    "message": "Downloads"
+  },
+  "settings": {
+    "message": "Configurações"
+  },
+  "urlPlaceholder": {
+    "message": "Cole um link…"
+  },
+  "find": {
+    "message": "Buscar"
+  },
+  "modeVideo": {
+    "message": "Vídeo"
+  },
+  "modeAudio": {
+    "message": "Só áudio"
+  },
+  "selectAll": {
+    "message": "Selecionar tudo"
+  },
+  "selectNone": {
+    "message": "Limpar"
+  },
+  "selectedCount": {
+    "message": "$1 de $2 selecionados"
+  },
+  "item": {
+    "message": "Item $1"
+  },
+  "download": {
+    "message": "Baixar"
+  },
+  "downloadN": {
+    "message": "Baixar $1 itens"
+  },
+  "downloadAudio": {
+    "message": "Baixar áudio"
+  },
+  "preview": {
+    "message": "prévia/fragmento ($1)"
+  },
+  "skipped": {
+    "message": "$1 item(ns) encontrados mas não oferecidos"
+  },
+  "noDownloads": {
+    "message": "Nenhum download ainda."
+  },
+  "clearFinished": {
+    "message": "Limpar concluídos"
+  },
+  "emptyHint": {
+    "message": "Abra uma página com vídeo ou cole um link acima."
+  },
+  "retry": {
+    "message": "Tentar de novo"
+  },
+  "statusExtracting": {
+    "message": "Procurando vídeos, áudio e fotos…"
+  },
+  "statusMusic": {
+    "message": "Procurando esta música no YouTube Music…"
+  },
+  "statusSession": {
+    "message": "Lendo com a sessão do seu navegador…"
+  },
+  "statusSniffer": {
+    "message": "Verificando os vídeos que esta aba carregou…"
+  },
+  "errNetwork": {
+    "message": "Não foi possível falar com o servidor do DownVid. Verifique sua conexão."
+  },
+  "errRateLimited": {
+    "message": "Muitas requisições. Aguarde um pouco e tente de novo."
+  },
+  "errRateLimitedRetry": {
+    "message": "Muitas requisições. Tente de novo em $1 s."
+  },
+  "errBusy": {
+    "message": "O servidor está ocupado agora. Tente de novo em instantes."
+  },
+  "errBadUrl": {
+    "message": "Este não é um link http(s) público."
+  },
+  "errNoMedia": {
+    "message": "Nenhum vídeo, áudio ou foto encontrado nesta página. Se a página tem um player, dê play no vídeo e tente de novo."
+  },
+  "errLoginRequired": {
+    "message": "Só quem está conectado ao $1 pode ver isto. Entre no $1 neste navegador e tente de novo: a extensão lê o conteúdo com a sua sessão (ela nunca sai do seu navegador)."
+  },
+  "signIn": {
+    "message": "Entrar no $1"
+  },
+  "jobWaiting": {
+    "message": "Aguardando uma vaga"
+  },
+  "jobQueued": {
+    "message": "Na fila do servidor"
+  },
+  "phase_queued": {
+    "message": "Na fila"
+  },
+  "phase_downloading": {
+    "message": "Baixando"
+  },
+  "phase_muxing": {
+    "message": "Juntando vídeo e áudio"
+  },
+  "phase_converting": {
+    "message": "Convertendo"
+  },
+  "jobDone": {
+    "message": "Pronto"
+  },
+  "jobSaved": {
+    "message": "Salvo"
+  },
+  "jobSaveFailed": {
+    "message": "Não foi possível salvar: $1"
+  },
+  "jobCanceled": {
+    "message": "Cancelado"
+  },
+  "jobFailed": {
+    "message": "Falhou"
+  },
+  "jobExpired": {
+    "message": "O servidor não tem mais este download."
+  },
+  "cancel": {
+    "message": "Cancelar"
+  },
+  "showFile": {
+    "message": "Mostrar na pasta"
+  },
+  "saveAgain": {
+    "message": "Salvar de novo"
+  },
+  "remove": {
+    "message": "Remover"
+  },
+  "notifyDone": {
+    "message": "Download concluído"
+  },
+  "notifyFailed": {
+    "message": "Falha no download"
+  },
+  "menuLink": {
+    "message": "Baixar link com o DownVid"
+  },
+  "menuPage": {
+    "message": "Baixar desta página com o DownVid"
+  },
+  "menuSelection": {
+    "message": "Baixar link selecionado com o DownVid"
+  },
+  "disclaimerTitle": {
+    "message": "Antes de começar"
+  },
+  "disclaimerText": {
+    "message": "Use o DownVid apenas com conteúdo seu, público ou que você tem autorização para baixar, respeitando os termos de uso de cada plataforma e os direitos autorais. Você é responsável pelo uso dos arquivos baixados."
+  },
+  "disclaimerServer": {
+    "message": "Os links são processados pelo servidor da API do DownVid, que baixa a mídia e guarda o arquivo por pouco tempo. Seus logins nunca são enviados: o conteúdo visível só para quem está conectado é lido no seu navegador e só os dados do post são enviados."
+  },
+  "disclaimerAccept": {
+    "message": "Entendi"
+  },
+  "secDownloads": {
+    "message": "Downloads"
+  },
+  "optVideoQuality": {
+    "message": "Qualidade de vídeo padrão"
+  },
+  "qualityBest": {
+    "message": "Melhor disponível"
+  },
+  "optAudioFormat": {
+    "message": "Formato de áudio padrão"
+  },
+  "audioM4a": {
+    "message": "M4A original (sem conversão)"
+  },
+  "audioMp3V0": {
+    "message": "MP3 V0 (variável, ~245 kbps)"
+  },
+  "audioMp3320": {
+    "message": "MP3 320 kbps"
+  },
+  "optMusicAudio": {
+    "message": "Links de música abrem em \"Só áudio\""
+  },
+  "optMusicAudioHint": {
+    "message": "YouTube Music, SoundCloud, Spotify, Deezer e Apple Music."
+  },
+  "secSaving": {
+    "message": "Salvar"
+  },
+  "optFolder": {
+    "message": "Subpasta na sua pasta de downloads"
+  },
+  "optSaveAs": {
+    "message": "Perguntar onde salvar cada arquivo"
+  },
+  "optNotify": {
+    "message": "Notificar quando um download terminar"
+  },
+  "secPages": {
+    "message": "Outras páginas"
+  },
+  "optSniffer": {
+    "message": "Detectar vídeos reproduzidos nas abas"
+  },
+  "optSnifferHint": {
+    "message": "Registra as requisições MP4/HLS que a página faz (como o player oculto do app), para baixar players que carregam o vídeo via JavaScript. A lista fica no navegador até você usá-la."
+  },
+  "secServer": {
+    "message": "Servidor"
+  },
+  "optApi": {
+    "message": "Endereço da API do DownVid"
+  },
+  "optApiReset": {
+    "message": "Usar o padrão"
+  },
+  "optApiDocs": {
+    "message": "Documentação da API"
+  },
+  "saved": {
+    "message": "Salvo"
+  },
+  "serverStatus": {
+    "message": "Status"
+  },
+  "serverOnline": {
+    "message": "Online"
+  },
+  "serverOffline": {
+    "message": "Offline ou inacessível"
+  },
+  "serverMaxFile": {
+    "message": "Tamanho máximo"
+  },
+  "serverMaxDuration": {
+    "message": "Duração máxima"
+  },
+  "serverFileTtl": {
+    "message": "Arquivos guardados por"
+  },
+  "serverJobs": {
+    "message": "Downloads simultâneos"
+  },
+  "serverPlatforms": {
+    "message": "Plataformas"
+  },
+  "minutes": {
+    "message": "$1 min"
+  },
+  "statusBrowser": {
+    "message": "Lendo pelo seu navegador…"
+  }
+}

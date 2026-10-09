@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DownVid</title>
+    <link rel="stylesheet" href="../popup/popup.css" />
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body class="page">
+    <div class="wrap">
+      <header class="head">
+        <img src="../icons/logo.svg" alt="" class="logo big" />
+        <div>
+          <h1 data-i18n="settings"></h1>
+          <p class="small" data-i18n="extDescription"></p>
+        </div>
+      </header>
+
+      <section class="card">
+        <h2 data-i18n="secDownloads"></h2>
+        <label class="field">
+          <span data-i18n="optVideoQuality"></span>
+          <select id="videoMaxHeight">
+            <option value="0" data-i18n="qualityBest"></option>
+            <option value="2160">2160p (4K)</option>
+            <option value="1440">1440p</option>
+            <option value="1080">1080p</option>
+            <option value="720">720p</option>
+            <option value="480">480p</option>
+            <option value="360">360p</option>
+          </select>
+        </label>
+        <label class="field">
+          <span data-i18n="optAudioFormat"></span>
+          <select id="audioFormat">
+            <option value="m4a_copy" data-i18n="audioM4a"></option>
+            <option value="mp3_v0" data-i18n="audioMp3V0"></option>
+            <option value="mp3_320" data-i18n="audioMp3320"></option>
+          </select>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="musicAudioMode" />
+          <span><b data-i18n="optMusicAudio"></b><small data-i18n="optMusicAudioHint"></small></span>
+        </label>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="secSaving"></h2>
+        <label class="field">
+          <span data-i18n="optFolder"></span>
+          <input type="text" id="folder" spellcheck="false" placeholder="DownVid" />
+        </label>
+        <label class="check">
+          <input type="checkbox" id="saveAs" />
+          <span><b data-i18n="optSaveAs"></b></span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="notify" />
+          <span><b data-i18n="optNotify"></b></span>
+        </label>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="secPages"></h2>
+        <label class="check">
+          <input type="checkbox" id="sniffer" />
+          <span><b data-i18n="optSniffer"></b><small data-i18n="optSnifferHint"></small></span>
+        </label>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="secServer"></h2>
+        <label class="field">
+          <span data-i18n="optApi"></span>
+          <input type="url" id="apiBase" spellcheck="false" />
+        </label>
+        <div class="row">
+          <button id="reset-api" class="link-btn" type="button" data-i18n="optApiReset"></button>
+          <a id="docs" class="link-btn" target="_blank" href="https://reinanbr.com/labs/downvid/api" data-i18n="optApiDocs"></a>
+        </div>
+        <dl id="server" class="server"></dl>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="disclaimerTitle"></h2>
+        <p data-i18n="disclaimerText"></p>
+        <p class="small" data-i18n="disclaimerServer"></p>
+      </section>
+
+      <p id="saved" class="saved" data-i18n="saved" hidden></p>
+    </div>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

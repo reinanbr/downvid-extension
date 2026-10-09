@@ -1,0 +1,272 @@
+{
+  "extName": {
+    "message": "DownVid: video, music and photo downloader"
+  },
+  "extDescription": {
+    "message": "Download videos, music and photos from YouTube, Instagram, Threads, TikTok, X, Facebook, SoundCloud and any page with MP4/HLS video, using the DownVid API."
+  },
+  "tabDownload": {
+    "message": "Download"
+  },
+  "tabDownloads": {
+    "message": "Downloads"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "urlPlaceholder": {
+    "message": "Paste a link…"
+  },
+  "find": {
+    "message": "Find"
+  },
+  "modeVideo": {
+    "message": "Video"
+  },
+  "modeAudio": {
+    "message": "Audio only"
+  },
+  "selectAll": {
+    "message": "Select all"
+  },
+  "selectNone": {
+    "message": "Clear"
+  },
+  "selectedCount": {
+    "message": "$1 of $2 selected"
+  },
+  "item": {
+    "message": "Item $1"
+  },
+  "download": {
+    "message": "Download"
+  },
+  "downloadN": {
+    "message": "Download $1 items"
+  },
+  "downloadAudio": {
+    "message": "Download audio"
+  },
+  "preview": {
+    "message": "preview/fragment ($1)"
+  },
+  "skipped": {
+    "message": "$1 item(s) found but not offered"
+  },
+  "noDownloads": {
+    "message": "No downloads yet."
+  },
+  "clearFinished": {
+    "message": "Clear finished"
+  },
+  "emptyHint": {
+    "message": "Open a page with a video, or paste a link above."
+  },
+  "retry": {
+    "message": "Try again"
+  },
+  "statusExtracting": {
+    "message": "Looking for videos, audio and photos…"
+  },
+  "statusMusic": {
+    "message": "Finding this song on YouTube Music…"
+  },
+  "statusSession": {
+    "message": "Reading it with your browser session…"
+  },
+  "statusSniffer": {
+    "message": "Checking the videos this tab played…"
+  },
+  "errNetwork": {
+    "message": "Could not reach the DownVid server. Check your connection."
+  },
+  "errRateLimited": {
+    "message": "Too many requests. Wait a moment and try again."
+  },
+  "errRateLimitedRetry": {
+    "message": "Too many requests. Try again in $1 s."
+  },
+  "errBusy": {
+    "message": "The server is busy right now. Try again in a moment."
+  },
+  "errBadUrl": {
+    "message": "This is not a public http(s) link."
+  },
+  "errNoMedia": {
+    "message": "No video, audio or photo found on this page. If the page has a player, play the video and try again."
+  },
+  "errLoginRequired": {
+    "message": "Only people signed in to $1 can see this. Sign in to $1 in this browser and try again: the extension reads it with your session (it never leaves your browser)."
+  },
+  "signIn": {
+    "message": "Sign in to $1"
+  },
+  "jobWaiting": {
+    "message": "Waiting for a free slot"
+  },
+  "jobQueued": {
+    "message": "Queued on the server"
+  },
+  "phase_queued": {
+    "message": "Queued"
+  },
+  "phase_downloading": {
+    "message": "Downloading"
+  },
+  "phase_muxing": {
+    "message": "Merging video and audio"
+  },
+  "phase_converting": {
+    "message": "Converting"
+  },
+  "jobDone": {
+    "message": "Ready"
+  },
+  "jobSaved": {
+    "message": "Saved"
+  },
+  "jobSaveFailed": {
+    "message": "Could not save: $1"
+  },
+  "jobCanceled": {
+    "message": "Canceled"
+  },
+  "jobFailed": {
+    "message": "Failed"
+  },
+  "jobExpired": {
+    "message": "The server no longer has this job."
+  },
+  "cancel": {
+    "message": "Cancel"
+  },
+  "showFile": {
+    "message": "Show in folder"
+  },
+  "saveAgain": {
+    "message": "Save again"
+  },
+  "remove": {
+    "message": "Remove"
+  },
+  "notifyDone": {
+    "message": "Download finished"
+  },
+  "notifyFailed": {
+    "message": "Download failed"
+  },
+  "menuLink": {
+    "message": "Download link with DownVid"
+  },
+  "menuPage": {
+    "message": "Download from this page with DownVid"
+  },
+  "menuSelection": {
+    "message": "Download selected link with DownVid"
+  },
+  "disclaimerTitle": {
+    "message": "Before you start"
+  },
+  "disclaimerText": {
+    "message": "Use DownVid only with content that is your own, public, or that you are authorized to download, respecting each platform's terms of service and copyright. You are responsible for how you use the downloaded files."
+  },
+  "disclaimerServer": {
+    "message": "Links are processed by the DownVid API server, which downloads the media and keeps the file for a short time. Your logins are never sent: content only signed-in users can see is read in your browser and only the post data is sent."
+  },
+  "disclaimerAccept": {
+    "message": "I understand"
+  },
+  "secDownloads": {
+    "message": "Downloads"
+  },
+  "optVideoQuality": {
+    "message": "Default video quality"
+  },
+  "qualityBest": {
+    "message": "Best available"
+  },
+  "optAudioFormat": {
+    "message": "Default audio format"
+  },
+  "audioM4a": {
+    "message": "M4A original (no conversion)"
+  },
+  "audioMp3V0": {
+    "message": "MP3 V0 (variable, ~245 kbps)"
+  },
+  "audioMp3320": {
+    "message": "MP3 320 kbps"
+  },
+  "optMusicAudio": {
+    "message": "Music links open in \"Audio only\""
+  },
+  "optMusicAudioHint": {
+    "message": "YouTube Music, SoundCloud, Spotify, Deezer and Apple Music."
+  },
+  "secSaving": {
+    "message": "Saving"
+  },
+  "optFolder": {
+    "message": "Subfolder in your downloads folder"
+  },
+  "optSaveAs": {
+    "message": "Ask where to save each file"
+  },
+  "optNotify": {
+    "message": "Notify when a download finishes"
+  },
+  "secPages": {
+    "message": "Other pages"
+  },
+  "optSniffer": {
+    "message": "Detect videos played in tabs"
+  },
+  "optSnifferHint": {
+    "message": "Records the MP4/HLS requests a page makes (like the app's hidden player), so players that load their streams with JavaScript can be downloaded. The list stays in the browser until you use it."
+  },
+  "secServer": {
+    "message": "Server"
+  },
+  "optApi": {
+    "message": "DownVid API address"
+  },
+  "optApiReset": {
+    "message": "Use the default"
+  },
+  "optApiDocs": {
+    "message": "API documentation"
+  },
+  "saved": {
+    "message": "Saved"
+  },
+  "serverStatus": {
+    "message": "Status"
+  },
+  "serverOnline": {
+    "message": "Online"
+  },
+  "serverOffline": {
+    "message": "Offline or unreachable"
+  },
+  "serverMaxFile": {
+    "message": "Max file size"
+  },
+  "serverMaxDuration": {
+    "message": "Max duration"
+  },
+  "serverFileTtl": {
+    "message": "Files kept for"
+  },
+  "serverJobs": {
+    "message": "Simultaneous downloads"
+  },
+  "serverPlatforms": {
+    "message": "Platforms"
+  },
+  "minutes": {
+    "message": "$1 min"
+  },
+  "statusBrowser": {
+    "message": "Reading it from your browser…"
+  }
+}

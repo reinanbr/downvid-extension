@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DownVid</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <img src="../icons/logo.svg" alt="" class="logo" />
+      <span class="brand">DownVid</span>
+      <nav class="tabs" role="tablist">
+        <button role="tab" id="tab-get" class="tab active" data-view="get" data-i18n="tabDownload"></button>
+        <button role="tab" id="tab-jobs" class="tab" data-view="jobs">
+          <span data-i18n="tabDownloads"></span> <span id="jobs-count" class="count" hidden></span>
+        </button>
+      </nav>
+      <button id="open-settings" class="icon-btn" data-i18n-title="settings" aria-label="Settings">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M19.14 12.94a7.5 7.5 0 0 0 .05-.94 7.5 7.5 0 0 0-.05-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.03 7.03 0 0 0-1.62-.94l-.36-2.54A.5.5 0 0 0 13.9 2h-3.8a.5.5 0 0 0-.5.42l-.36 2.54c-.59.24-1.13.56-1.62.94l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.48a.5.5 0 0 0 .12.64l2.03 1.58a7.5 7.5 0 0 0 0 1.88l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32c.13.22.39.3.6.22l2.39-.96c.49.38 1.03.7 1.62.94l.36 2.54c.05.24.26.42.5.42h3.8c.25 0 .46-.18.5-.42l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .6-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7Z"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <main>
+      <!-- Download: link → options → start -->
+      <section id="view-get" class="view">
+        <form id="url-form" class="url-row">
+          <input id="url" type="url" required spellcheck="false" autocomplete="off" data-i18n-placeholder="urlPlaceholder" />
+          <button type="submit" class="btn" data-i18n="find"></button>
+        </form>
+
+        <div id="status" class="status" hidden>
+          <span class="spinner"></span><span id="status-text"></span>
+        </div>
+
+        <div id="error" class="notice error" hidden>
+          <p id="error-text"></p>
+          <div id="error-actions" class="actions"></div>
+        </div>
+
+        <div id="result" hidden>
+          <div id="media" class="media">
+            <img id="thumb" alt="" referrerpolicy="no-referrer" />
+            <div class="meta">
+              <div id="title" class="title"></div>
+              <div id="subtitle" class="subtitle"></div>
+              <span id="platform" class="chip"></span>
+            </div>
+          </div>
+
+          <div id="mode" class="segmented" hidden>
+            <button type="button" data-mode="video" data-i18n="modeVideo"></button>
+            <button type="button" data-mode="audio" data-i18n="modeAudio"></button>
+          </div>
+
+          <div id="carousel-tools" class="carousel-tools" hidden>
+            <span id="carousel-count"></span>
+            <button type="button" id="select-all" class="link-btn" data-i18n="selectAll"></button>
+          </div>
+
+          <ul id="options" class="options"></ul>
+
+          <details id="skipped" class="skipped" hidden>
+            <summary></summary>
+            <ul></ul>
+          </details>
+
+          <button id="download" class="btn primary wide" type="button"></button>
+        </div>
+
+        <p id="empty" class="hint" hidden></p>
+      </section>
+
+      <!-- Downloads: server jobs, YouTube captures, direct files -->
+      <section id="view-jobs" class="view" hidden>
+        <ul id="jobs" class="jobs"></ul>
+        <p id="jobs-empty" class="hint" data-i18n="noDownloads"></p>
+        <button id="clear" class="link-btn" type="button" data-i18n="clearFinished" hidden></button>
+      </section>
+    </main>
+
+    <!-- First use: same notice as the app -->
+    <div id="disclaimer" class="overlay" hidden>
+      <div class="dialog">
+        <img src="../icons/logo.svg" alt="" class="logo big" />
+        <h2 data-i18n="disclaimerTitle"></h2>
+        <p data-i18n="disclaimerText"></p>
+        <p class="small" data-i18n="disclaimerServer"></p>
+        <button id="accept" class="btn primary wide" data-i18n="disclaimerAccept"></button>
+      </div>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

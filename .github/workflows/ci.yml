@@ -1,0 +1,87 @@
+# CI for the DownVid browser extension.
+#
+# Every push and pull request: syntax check, unit tests (link parsing,
+# Instagram ids, titles), web-ext lint, and the packages as a downloadable
+# artifact ("downvid-extension": the Chrome and Firefox zips).
+# Tags v* (e.g. v0.2.0): the same zips attached to a GitHub Release, so
+# https://github.com/<owner>/<repo>/releases/latest/download/downvid-extension-chrome.zip
+# always points to the latest version.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Syntax check
+        run: for f in $(git ls-files '*.js' '*.mjs'); do node --check "$f"; done
+
+      - name: Unit tests
+        run: npm test
+
+      - name: web-ext lint
+        run: npm run lint
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Tag matches manifest version
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          v=$(node -e "console.log(JSON.parse(require('fs').readFileSync('manifest.json','utf8')).version)")
+          [ "v$v" = "${GITHUB_REF_NAME}" ] || { echo "manifest.json has $v, tag is ${GITHUB_REF_NAME}"; exit 1; }
+
+      - name: Build packages
+        run: scripts/build.sh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: downvid-extension
+          path: dist/*.zip
+          if-no-files-found: error
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: downvid-extension
+          path: dist
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.zip
+          generate_release_notes: true

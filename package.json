@@ -1,0 +1,16 @@
+{
+  "name": "downvid-extension",
+  "version": "0.2.0",
+  "private": true,
+  "description": "DownVid browser extension: download videos, music and photos with the DownVid API.",
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "lint": "web-ext lint --source-dir . --self-hosted",
+    "build": "scripts/build.sh"
+  },
+  "devDependencies": {
+    "web-ext": "8.3.0"
+  }
+}
