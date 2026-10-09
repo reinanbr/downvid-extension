@@ -1,142 +1,144 @@
 <p align="center"><img src="icons/logo.svg" width="96" alt="DownVid"></p>
 
-<h1 align="center">DownVid: extensão de navegador</h1>
+<h1 align="center">DownVid browser extension</h1>
 
 <p align="center">
   <a href="https://github.com/reinanbr/downvid-extension/actions/workflows/ci.yml"><img src="https://github.com/reinanbr/downvid-extension/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://github.com/reinanbr/downvid-extension/releases/latest"><img src="https://img.shields.io/github/v/release/reinanbr/downvid-extension" alt="Release"></a>
 </p>
 
-Baixe vídeos, músicas e fotos do **YouTube, YouTube Music, Instagram, Threads,
-TikTok, X/Twitter, Facebook, SoundCloud**, de links do **Spotify, Deezer e
-Apple Music** (a mesma gravação, encontrada no YouTube Music) e de qualquer
-página com vídeo MP4/HLS. É a versão para navegador do app Android
-[DownVid](https://github.com/reinanbr/downvid), sobre a
-[API do DownVid](https://reinanbr.com/labs/downvid/api).
+Download videos, music and photos from **YouTube, YouTube Music, Instagram,
+Threads, TikTok, X/Twitter, Facebook and SoundCloud**, from **Spotify, Deezer
+and Apple Music** links (the same recording, found on YouTube Music) and from
+any page with an MP4/HLS video. It is the browser version of the
+[DownVid](https://github.com/reinanbr/downvid) Android app, built on the
+[DownVid API](https://reinanbr.com/labs/downvid/api).
 
-> Use apenas com conteúdo seu, público ou que você tem autorização para
-> baixar, respeitando os termos de cada plataforma e os direitos autorais.
+> Use DownVid only with content that is your own, public, or that you are
+> authorized to download, respecting each platform's terms of service and
+> copyright.
 
 ## Download
 
-| Navegador | Pacote |
+| Browser | Package |
 |---|---|
 | Chrome, Edge, Brave, Opera | [downvid-extension-chrome.zip](https://github.com/reinanbr/downvid-extension/releases/latest/download/downvid-extension-chrome.zip) |
 | Firefox 128+ | [downvid-extension-firefox.zip](https://github.com/reinanbr/downvid-extension/releases/latest/download/downvid-extension-firefox.zip) |
 
-Cada push gera os mesmos zips como artefato do
+Every push also builds both zips as a
 [CI](https://github.com/reinanbr/downvid-extension/actions/workflows/ci.yml)
-(artefato `downvid-extension`).
+artifact (`downvid-extension`).
 
-### Instalar
+### Install
 
-- **Chrome / Edge / Brave**: descompacte o zip, abra `chrome://extensions`,
-  ative o *Modo do desenvolvedor*, clique em *Carregar sem compactação* e
-  escolha a pasta.
-- **Firefox**: `about:debugging#/runtime/this-firefox` → *Carregar extensão
-  temporária…* → escolha o zip (ou o `manifest.json`). Em `about:addons` →
-  DownVid → *Permissões*, permita o acesso a todos os sites.
+- **Chrome / Edge / Brave**: unzip the package, open `chrome://extensions`,
+  turn on *Developer mode*, click *Load unpacked* and pick the folder.
+- **Firefox**: `about:debugging#/runtime/this-firefox` → *Load Temporary
+  Add-on…* → pick the zip (or `manifest.json`). In `about:addons` → DownVid →
+  *Permissions*, allow access to all sites.
 
-## Telas
+## Screenshots
 
-| YouTube | Música (Spotify → YouTube Music) | TikTok |
+| YouTube | Music (Spotify → YouTube Music) | TikTok |
 |---|---|---|
-| ![YouTube](docs/screenshots/youtube.png) | ![Música](docs/screenshots/music.png) | ![TikTok](docs/screenshots/tiktok.png) |
+| ![YouTube](docs/screenshots/youtube.png) | ![Music](docs/screenshots/music.png) | ![TikTok](docs/screenshots/tiktok.png) |
 
-| Downloads (baixando no servidor) | Downloads concluídos |
+| Downloads (running on the server) | Downloads finished |
 |---|---|
-| ![Downloads](docs/screenshots/downloads.png) | ![Concluídos](docs/screenshots/downloads-done.png) |
+| ![Downloads](docs/screenshots/downloads.png) | ![Finished](docs/screenshots/downloads-done.png) |
 
-<img src="docs/screenshots/options.png" width="520" alt="Configurações">
+<img src="docs/screenshots/options.png" width="520" alt="Settings">
 
-## Como usar
+## Usage
 
-- **Ícone da barra**: abre a busca para a aba atual (ou cole um link).
-  Escolha a qualidade, ou *Só áudio* (M4A original, MP3 320 ou MP3 V0, com
-  tags e capa), e clique em *Baixar*. Carrosséis do Instagram e
-  do Threads têm caixas de seleção.
-- **Menu de contexto**: "Baixar link com o DownVid" em links, "Baixar desta
-  página" em páginas e vídeos, e "Baixar link selecionado" em texto.
-- **Downloads**: a fila com o progresso (baixando, juntando, convertendo),
-  cancelar, mostrar na pasta e salvar de novo. Os arquivos vão para
-  `Downloads/DownVid/`. Um download que falhou (por exemplo, um link do
-  YouTube que expirou) pode ser tentado de novo: a extensão extrai o link
-  outra vez e reinicia a mesma opção, como a renovação de links do app.
-- **Configurações**: qualidade padrão, formato de áudio, links de música em
-  *Só áudio*, subpasta, perguntar onde salvar, notificações, detector de
-  vídeos e o endereço da API.
+- **Toolbar button**: looks up the current tab (or paste a link). Pick a
+  quality, or *Audio only* (original M4A, MP3 320 or MP3 V0, with tags and
+  cover art), and click *Download*. Instagram and Threads carousels have
+  checkboxes.
+- **Context menu**: "Download link with DownVid" on links, "Download from
+  this page with DownVid" on pages and videos, and "Download selected link
+  with DownVid" on selected text.
+- **Downloads**: the queue with its progress (downloading, merging,
+  converting), cancel, show in folder and save again. Files go to
+  `Downloads/DownVid/`. A failed download (for example a YouTube link that
+  expired) can be retried: the extension extracts the link again and
+  restarts the same choice, like the app's link renewal.
+- **Settings**: default video quality, audio format, music links in *Audio
+  only*, subfolder, ask where to save, notifications, the video detector and
+  the API address.
 
-## Como funciona
+## How it works
 
-Tudo passa pela [API do DownVid](https://reinanbr.com/labs/downvid/api):
-`POST /v1/extract` lista as opções, `POST /v1/jobs` baixa no servidor (junta
-vídeo e áudio, converte para MP3/M4A com tags e capa), a extensão acompanha o
-job e salva `GET /v1/jobs/{id}/file` com o gerenciador de downloads. O que
-muda por link é como as opções são obtidas (como no `ExtractController` do
-app):
+Everything goes through the [DownVid API](https://reinanbr.com/labs/downvid/api):
+`POST /v1/extract` lists the options, `POST /v1/jobs` downloads on the server
+(merges video and audio, converts to MP3/M4A with tags and cover art), and the
+extension follows the job and saves `GET /v1/jobs/{id}/file` with the
+browser's download manager. What changes per link is how the options are
+found (as in the app's `ExtractController`):
 
-| Link | Rota |
+| Link | Route |
 |---|---|
-| **YouTube, YouTube Music, TikTok, X, Facebook, SoundCloud…** | `/v1/extract` (yt-dlp no servidor). Se nada for encontrado e o link for a aba aberta, os vídeos que a aba carregou vão para `/v1/probe`. |
-| **Spotify / Deezer / Apple Music** | `/v1/extract` lê a faixa e encontra a mesma gravação no YouTube Music (mesma duração ±5 s). Abre direto em *Só áudio*, com álbum, ano e capa (`/v1/music/meta`). |
-| **Instagram** | `/v1/extract` (consulta pública no servidor). Se o Instagram recusa o servidor, a mesma consulta pública é feita na página do post, no navegador. Posts privados e stories usam a sessão do usuário (`/api/v1/media/{id}/info/`, `reels_media`) e só a resposta vai para `/v1/parse/instagram`. |
-| **Threads** | `/v1/extract`; se o post está oculto para visitantes, os dados que a página do post embute ou busca → `/v1/parse/threads`. |
-| **Qualquer outra página** | `/v1/extract` (scan + yt-dlp) e, em paralelo, `/v1/probe` com as requisições MP4/HLS da aba (detector de rede, como o `PageSniffer` do app) e os `<video>`/`og:video` do DOM. |
+| **YouTube, YouTube Music, TikTok, X, Facebook, SoundCloud…** | `/v1/extract` (yt-dlp on the server). If nothing is found and the link is the open tab, the videos the tab loaded go to `/v1/probe`. |
+| **Spotify / Deezer / Apple Music** | `/v1/extract` reads the track and finds the same recording on YouTube Music (same duration ±5 s). Opens in *Audio only*, with album, year and cover art (`/v1/music/meta`). |
+| **Instagram** | `/v1/extract` (the logged-out query, made by the server). If Instagram refuses the server, the same logged-out query runs on the post page, in the browser. Private posts and stories use the user's own session (`/api/v1/media/{id}/info/`, `reels_media`) and only the response goes to `/v1/parse/instagram`. |
+| **Threads** | `/v1/extract`; if the post is hidden from visitors, the data the post page embeds or fetches → `/v1/parse/threads`. |
+| **Any other page** | `/v1/extract` (page scan + yt-dlp) and, in parallel, `/v1/probe` with the MP4/HLS requests the tab made (network sniffer, like the app's `PageSniffer`) and the page's `<video>`/`og:video`. |
 
-### YouTube e o servidor
+### YouTube and the server
 
-O YouTube pede verificação anti-bot para endereços de datacenter. O servidor
-da API resolve isso com o yt-dlp usando um provedor de *PO token*
+YouTube asks datacenter addresses for a bot check. The API server handles it
+with yt-dlp, a PO token provider
 ([bgutil-ytdlp-pot-provider](https://github.com/Brainicism/bgutil-ytdlp-pot-provider))
-e os cookies de uma conta do YouTube dedicada a isso (veja o README da API).
-A extensão não guarda nem envia sessões do YouTube.
+and the cookies of a YouTube account dedicated to it. The extension never
+stores or sends YouTube sessions.
 
-### Privacidade
+### Privacy
 
-A sessão do Instagram e do Threads nunca sai do navegador: a extensão envia
-à API só a resposta do post. O detector
-guarda as URLs de mídia em `storage.session` (some ao fechar o navegador) e
-só as envia quando você pede um download daquela aba. Os limites (arquivo de
-1 GB, 120 min, 4 downloads simultâneos no servidor, requisições por minuto)
-vêm de `GET /v1/info`; quando o servidor recusa por excesso de jobs, a
-extensão espera na fila local.
+Instagram and Threads sessions never leave the browser: the extension sends
+the API only the post's response. The sniffer keeps media URLs in
+`storage.session` (cleared when the browser closes) and sends them only when
+you ask for a download from that tab. The limits (1 GB files, 120 min, 4
+simultaneous server downloads, requests per minute) come from
+`GET /v1/info`; when the server refuses because of too many jobs, the
+extension waits in its local queue.
 
-## Desenvolvimento
+## Development
 
 ```bash
 npm ci
-npm test            # links, ids do Instagram, títulos
+npm test            # links, Instagram ids, titles
 npm run lint        # web-ext lint
-npm run build       # dist/downvid-extension-chrome.zip e -firefox.zip
-npx web-ext run     # abre o Firefox com a extensão
+npm run build       # dist/downvid-extension-chrome.zip and -firefox.zip
+npx web-ext run     # opens Firefox with the extension
 ```
 
-O CI (`.github/workflows/ci.yml`) roda checagem de sintaxe, testes, lint e
-build em cada push e PR, e publica os zips como artefato. Tags `v*` (por
-exemplo `v0.2.0`, igual ao `version` do `manifest.json`) criam um GitHub
-Release com os zips, e é para ele que os links de download apontam.
+CI (`.github/workflows/ci.yml`) runs a syntax check, the tests, the lint and
+the build on every push and pull request, and uploads the zips as an
+artifact. `v*` tags (e.g. `v0.2.0`, equal to `version` in `manifest.json`)
+create a GitHub Release with the zips, which the download links point to.
 
 ```
 manifest.json
-src/background.js       detector de rede, fila de jobs, downloads, menu de contexto
-src/extract.js          escolha da rota de extração (porta do ExtractController do app)
-src/api.js              cliente da API do DownVid
-src/links.js            plataformas, id de mídia do Instagram
-src/page_scripts.js     consultas do Instagram/Threads nas abas (porta do InstagramQuery.kt)
-src/threads_hook.js     guarda as respostas com mídia nas páginas do Threads
-popup/, options/        interface
-_locales/en, pt_BR      traduções
-test/                   testes (node --test)
+src/background.js       network sniffer, job queue, downloads, context menu
+src/extract.js          picks the extraction route (port of the app's ExtractController)
+src/api.js              DownVid API client
+src/links.js            platforms, Instagram media ids
+src/page_scripts.js     Instagram/Threads queries run in tabs (port of InstagramQuery.kt)
+src/threads_hook.js     keeps the responses that carry media on Threads pages
+popup/, options/        user interface
+_locales/en, pt_BR      translations (English is the default)
+test/                   tests (node --test)
 ```
 
-## Limitações
+## Limitations
 
-- Lives, DRM e manifestos DASH `.mpd` de páginas genéricas não são suportados.
-- O que o servidor não baixa (por exemplo, quando o YouTube bloqueia o
-  endereço dele), a extensão também não baixa: ela mostra o erro da API.
-- Conteúdo do Instagram ou Threads visível só para quem está conectado precisa
-  de login no navegador; stories sempre precisam.
+- Live streams, DRM and DASH `.mpd` manifests on generic pages are not
+  supported.
+- What the server cannot download (for example when YouTube blocks its
+  address), the extension cannot either: it shows the API's error.
+- Instagram or Threads content that only signed-in users can see needs you
+  to be signed in in the browser; stories always do.
 
-## Licença
+## License
 
-[GPL-3.0](LICENSE), como o app DownVid.
+[GPL-3.0](LICENSE), like the DownVid app.

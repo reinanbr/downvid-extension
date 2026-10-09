@@ -19,7 +19,7 @@ const URL_RE = /https?:\/\/[^\s<>"']+/i;
 // Trailing punctuation that share texts often glue onto the URL.
 const TRAILING_JUNK = /[).,;:!?\]}>]+$/;
 
-/** First http(s) URL in arbitrary text ("Olha isso https://youtu.be/abc !"). */
+/** First http(s) URL in arbitrary text ("Check this out https://youtu.be/abc !"). */
 export function findUrl(text) {
   const m = text?.match(URL_RE);
   if (!m) return null;

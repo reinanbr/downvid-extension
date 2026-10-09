@@ -4,7 +4,7 @@ import { detectPlatform, findUrl, igMediaId, igQuery, prefersAudio, threadsShort
 import { unescapeHtml } from '../src/extract.js';
 
 test('finds the link in shared text', () => {
-  assert.equal(findUrl('Olha isso https://youtu.be/abc?si=x !'), 'https://youtu.be/abc?si=x');
+  assert.equal(findUrl('Check this out https://youtu.be/abc?si=x !'), 'https://youtu.be/abc?si=x');
   assert.equal(findUrl('(https://x.com/a/status/1).'), 'https://x.com/a/status/1');
   assert.equal(findUrl('no link here'), null);
 });
