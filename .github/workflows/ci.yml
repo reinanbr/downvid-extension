@@ -63,7 +63,7 @@ jobs:
       - name: Build packages
         run: scripts/build.sh
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: downvid-extension
           path: dist/*.zip
@@ -76,7 +76,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: downvid-extension
           path: dist
